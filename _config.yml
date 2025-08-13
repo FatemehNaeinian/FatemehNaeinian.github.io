@@ -1,14 +1,86 @@
+# Site settings
 title: "Fatemeh Naeinian"
 description: "PhD Student | AI & Autonomous Driving"
-url: "https://FatemehNaeinian.github.io"
-baseurl: ""  # leave empty for username.github.io sites
+url: "https://FatemehNaeinian.github.io"  # Your site URL
+baseurl: ""  # Leave empty for username.github.io sites
 
+# Author settings
 author:
   name: "Fatemeh Naeinian"
   email: "fn2174@nyu.edu"
   github: "FatemehNaeinian"
   linkedin: "fatemeh-naeinian-550004204"
 
-# Build settings
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  publications:
+    output: true
+    permalink: /publication/:path/
+  talks:
+    output: true
+    permalink: /talk/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+# Defaults for collections
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+
+# Markdown and Permalinks
 markdown: kramdown
 permalink: /:categories/:title/
+
+# Output options
+include: ["_pages"]
