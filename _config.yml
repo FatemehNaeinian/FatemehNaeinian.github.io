@@ -77,27 +77,28 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
-
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
+teaser                   :               # Optional: add a fallback image in /images/, e.g. "500x300.png"
+breadcrumbs              : false         # true or false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
+read_more                : "disabled"    # if enabled, adds "Read more" links to excerpts
+talkmap_link             : false          # change to true to add link to talkmap on talks page
+
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : false          # keep false until you choose a comment system
   disqus:
-    shortname            :
+    shortname            : 
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               : 
   facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    appid                : 
+    num_posts            : 
+    colorscheme          : 
+
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  branch                 : "gh-pages"     # "master" or "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -110,44 +111,44 @@ staticman:
     date:
       type               : "date"
       options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           : "iso8601"
+
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
-
-
-# SEO Related
+  hide                   : false          # change to true to hide RSS feed in footer
+  path                   :                # leave blank to use default feed.xml
+ # SEO Related
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter  # You can add your Twitter/X username if you create one
 facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+  username               : 
+  app_id                 : 
+  publisher              : 
+og_image                 :           # Optional: path to a default image for sharing (e.g., /images/og-image.png)
+og_description           : "PhD student at NYU specializing in AI and Autonomous Driving"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
+  type                   : Person
+  name                   : "Fatemeh Naeinian"
+  links:
+    - "https://github.com/FatemehNaeinian"
+    - "https://www.linkedin.com/in/fatemeh-naeinian-550004204/"
+    - "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : "false"   # Keep "false" until you set up tracking
   google:
-    tracking_id          :
+    tracking_id          : 
 
 
-# Reading Files
+    # Reading Files
 include:
   - .htaccess
   - _pages
@@ -185,14 +186,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -205,9 +204,11 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 # These settings control the types of collections used by the template
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -222,7 +223,7 @@ collections:
     permalink: /:collection/:path/
 
 
-# These settings control how pages and collections are included in the site
+   # These settings control how pages and collections are included in the site
 defaults:
   # _posts
   - scope:
@@ -268,7 +269,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comments: true     # ← fixed (was 'comment')
   # _talks
   - scope:
       path: ""
@@ -278,19 +279,16 @@ defaults:
       author_profile: true
       share: true
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
+  style: compressed
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
+# paginate: 5
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: America/New_York
 
 # Plugins
 plugins:
@@ -300,6 +298,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+  - jekyll-include-cache    # required by Minimal Mistakes/AcademicPages
 
 # Mimic GitHub Pages with --safe
 whitelist:
@@ -309,25 +308,15 @@ whitelist:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
-
+  - jekyll-include-cache
 
 # Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
 #     - categories
@@ -339,9 +328,7 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
 # HTML Compression
-# - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
