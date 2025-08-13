@@ -1,18 +1,14 @@
-# Authors
-
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+fatemeh:
+  name   : "Fatemeh Naeinian"
+  bio    : "PhD student in Electrical Engineering at NYU specializing in AI & Autonomous Driving."
+  avatar : "profile.png"   # or your own image filename in /images
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:fn2174@nyu.edu"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/FatemehNaeinian"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/fatemeh-naeinian-550004204/"
