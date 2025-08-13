@@ -1,6 +1,6 @@
 fatemeh:
   name   : "Fatemeh Naeinian"
-  bio    : "PhD student in Electrical Engineering at NYU specializing in AI & Autonomous Driving."
+  bio    : "PhD student in Electrical Engineering"
   avatar : "profile.png"   # or your own image filename in /images
   links:
     - label: "Email"
