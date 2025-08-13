@@ -1,13 +1,7 @@
 main:
-  - title: "About"
-    url: /about/
   - title: "CV"
     url: /files/Fatemeh_Naeinian_CV_NYU.pdf
   - title: "Publications"
     url: /publications/
   - title: "Research"
     url: /research/
-  - title: "Teaching"
-    url: /teaching/
-  - title: "Blog"
-    url: /blog/
