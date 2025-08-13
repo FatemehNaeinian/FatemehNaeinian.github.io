@@ -2,7 +2,6 @@
 permalink: /
 title: "Fatemeh Naeinian"
 author_profile: true
-author: fatemeh
 ---
 
 I am a PhD student in Electrical Engineering at **New York University**, specializing in **AI and Autonomous Driving**.  
