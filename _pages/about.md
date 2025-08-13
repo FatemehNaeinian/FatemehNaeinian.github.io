@@ -11,9 +11,3 @@ Previously, I earned my B.Sc. in Electrical Engineering (Control Systems) with a
 
 ---
 
-### Quick Links
-- [**Curriculum Vitae (PDF)**](/files/Fatemeh_Naeinian_CV_NYU.pdf)
-- [**Publications**](/publications/)
-- [**Teaching**](/teaching/)
-- [**Blog**](/blog/)
-- [**Contact**](mailto:fn2174@nyu.edu)
