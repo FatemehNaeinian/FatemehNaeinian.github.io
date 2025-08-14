@@ -4,10 +4,13 @@ title: "About me"
 author_profile: true
 ---
 
-I am a PhD student in Electrical Engineering at **New York University**, specializing in **AI and Autonomous Driving**.  
-My research focuses on domain adaptation, neural network architectures, and optimization for autonomous systems.
+Hi! I’m **Fatemeh Naeinian**, a first-year PhD student in Electrical Engineering at **New York University (NYU)**, where I’m advised by [Prof. Anna Choromanska](https://engineering.nyu.edu/faculty/anna-choromanska).  
 
-Previously, I earned my B.Sc. in Electrical Engineering (Control Systems) with a minor in Computer Engineering from the **University of Tehran**, graduating among the top 3 in my field. My undergraduate thesis involved mapping human grasping patterns to 3-finger robotic grippers using deep learning and computer vision.
+My research focuses on artificial intelligence and autonomous driving—particularly on building deep learning models that can generalize across different driving environments.
+
+I received my B.Sc. in Electrical Engineering with a minor in Computer Engineering from the **University of Tehran**. During my undergraduate studies, I conducted research on learning-based robotic grasping, and my thesis was published at the **32nd International Conference on Electrical Engineering (ICEE 2024)**.
+
+Outside of academics, I enjoy cooking, exploring New York City, and watching movies in my downtime.
 
 ---
 
