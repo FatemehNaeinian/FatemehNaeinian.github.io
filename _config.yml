@@ -1,7 +1,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"  # "default" or "air"
-title                    : "Fatemeh Naeinian"
+title                    : "Fatemeh's Homepage"
 title_separator          : "-"
 name                     : &name "Fatemeh Naeinian"
 description              : &description "PhD student at NYU | AI & Autonomous Driving"
@@ -15,7 +15,7 @@ author:
   avatar           : "profile.png"  # replace with your own image file in /images/ if you have one
   name             : "Fatemeh Naeinian"
   pronouns         : "she/her"  
-  bio              : "PhD student in Electrical Engineering at NYU specializing in AI and Autonomous Driving."
+  bio              : "PhD student in Electrical Engineering at NYU"
   location         : "New York, USA"
   employer         : "New York University"
   uri              : "https://engineering.nyu.edu/faculty/anna-choromanska"
