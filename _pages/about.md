@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Fatemeh Naeinian"
+title: "About me"
 author_profile: true
 ---
 
