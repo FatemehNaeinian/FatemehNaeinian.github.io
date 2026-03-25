@@ -2,10 +2,10 @@
 title: "Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations"
 collection: publications
 permalink: /publication/2026-cross-city-generalization
-date: 2026-03-01
+date: 2026-03-12
 venue: "arXiv preprint"
 paperurl: "https://arxiv.org/abs/2603.11417"
-citation: "F. Naeinian, et al., 'Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations,' arXiv:2603.11417, 2026."
+citation: "F. Naeinian, A. Hamza, H. Zhu, A. Choromanska, 'Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations,' arXiv:2603.11417, 2026."
 category: preprints
 ---
 
