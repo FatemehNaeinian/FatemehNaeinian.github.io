@@ -4,14 +4,10 @@ title: "About me"
 author_profile: true
 ---
 
-Hi!👋
-I’m **Fatemeh**, a second-year PhD student in Electrical Engineering at **New York University (NYU)** under the supervision of [Prof. Anna Choromanska](https://engineering.nyu.edu/faculty/anna-choromanska).👩‍🎓  
+I am **Fatemeh Naeinian**, a second-year PhD student in Electrical Engineering at **New York University (NYU)**, advised by [Prof. Anna Choromanska](https://engineering.nyu.edu/faculty/anna-choromanska).
 
-My research focuses on self-supervised learning and autonomous driving—particularly on building world models that can generalize across different driving environments.🚙
+My research focuses on self-supervised learning and autonomous driving, with an emphasis on building world models that generalize across diverse driving environments. I am particularly interested in understanding how representation learning impacts robustness and transfer across different cities and driving conditions.
 
-I received my B.Sc. in Electrical Engineering with a minor in Computer Engineering from the **University of Tehran**. During my undergraduate studies, I conducted research on learning-based robotic grasping, and my thesis was published at the **32nd International Conference on Electrical Engineering (ICEE 2024)**.📚
+I received my B.Sc. in Electrical Engineering, with a minor in Computer Engineering, from the **University of Tehran**. During my undergraduate studies, I worked on learning-based robotic grasping, resulting in a publication at the **32nd International Conference on Electrical Engineering (ICEE 2024)**.
 
-Outside of academics, I enjoy cooking, exploring New York City, and watching movies in my downtime.🎬
-
----
-
+Outside of research, I enjoy cooking, exploring New York City, and watching movies.
