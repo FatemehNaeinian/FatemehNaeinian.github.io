@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "About Me"
 author_profile: true
 ---
 
@@ -8,12 +8,13 @@ I am **Fatemeh Naeinian**, a second-year PhD student in Electrical Engineering a
 
 My research focuses on self-supervised learning and autonomous driving, with an emphasis on building world models that generalize across diverse driving environments. I am particularly interested in understanding how representation learning impacts robustness and transfer across different cities and driving conditions.
 
-I received my B.Sc. in Electrical Engineering, with a minor in Computer Engineering, from the **University of Tehran**. During my undergraduate studies, I worked on learning-based robotic grasping, resulting in a publication at the **32nd International Conference on Electrical Engineering (ICEE 2024)**.
+I received my B.Sc. in Electrical Engineering, with a minor in Computer Engineering, from the **University of Tehran**.
 
 Outside of research, I enjoy cooking, exploring New York City, and watching movies.
 
-
 ## News
 
-- [March 2026] Our paper on zero-shot cross-city generalization in autonomous driving is available on arXiv.
-- [May 2024] Presented our work on Machine learning-based robotic grasping at ICEE 2024.
+- [May 2026] Released the TALKtoME Dataset, a curated visual dataset supporting speech and language acquisition in autism. [Website](https://wp.nyu.edu/tandon_autism/)
+- [April 2026] Presented our work on zero-shot cross-city generalization in autonomous driving at NYC Computer Vision Day.
+- [March 2026] Our paper on zero-shot cross-city generalization in autonomous driving became available on arXiv. [arXiv](https://arxiv.org/abs/2603.11417)
+- [May 2024] Presented our work on learning-based robotic grasping at ICEE 2024. [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/10668014)
