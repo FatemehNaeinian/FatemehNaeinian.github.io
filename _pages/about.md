@@ -17,4 +17,4 @@ Outside of research, I enjoy cooking, exploring New York City, and watching movi
 - [May 2026] Released the TALKtoME Dataset, a curated visual dataset supporting speech and language acquisition in autism. [Website](https://wp.nyu.edu/tandon_autism/)
 - [April 2026] Presented our work on zero-shot cross-city generalization in autonomous driving at NYC Computer Vision Day.
 - [March 2026] Our paper on zero-shot cross-city generalization in autonomous driving became available on arXiv. [arXiv](https://arxiv.org/abs/2603.11417)
-- [May 2024] Presented our work on learning-based robotic grasping at ICEE 2024. [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/10668014)
+- [May 2024] Presented our work on learning-based robotic grasping at ICEE 2024. [IEEE](https://ieeexplore.ieee.org/abstract/document/10668014)
