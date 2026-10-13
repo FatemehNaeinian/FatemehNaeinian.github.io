@@ -15,28 +15,28 @@
 :root,
 .light {
   /* Light theme colors */
-  --background: #fefffe;
-  --foreground: #0f172a;
+  --background: #faf7fd;
+  --foreground: #1f1530;
   
-  /* Brand colors - Deep Navy & Gold */
-  --primary: #1e293b;
-  --primary-light: #334155;
-  --primary-dark: #0f172a;
-  --accent: #d4a562;
-  --accent-light: #e4b976;
-  --accent-dark: #b8914d;
+  /* Brand colors - Light lavender & NYU purple */
+  --primary: #2a1a40;
+  --primary-light: #3f2a5c;
+  --primary-dark: #1f1530;
+  --accent: #57068c;
+  --accent-light: #7b2cbf;
+  --accent-dark: #3f0566;
   
-  /* Neutral colors */
-  --neutral-50: #f8fafc;
-  --neutral-100: #f1f5f9;
-  --neutral-200: #e2e8f0;
-  --neutral-300: #cbd5e1;
-  --neutral-400: #94a3b8;
-  --neutral-500: #64748b;
-  --neutral-600: #475569;
-  --neutral-700: #334155;
-  --neutral-800: #1e293b;
-  --neutral-900: #0f172a;
+  /* Neutral colors (purple-tinted) */
+  --neutral-50: #f6f2fb;
+  --neutral-100: #efe8f7;
+  --neutral-200: #e2d8ef;
+  --neutral-300: #cbbde0;
+  --neutral-400: #9c8db5;
+  --neutral-500: #6f6189;
+  --neutral-600: #54476b;
+  --neutral-700: #3f3454;
+  --neutral-800: #2a2238;
+  --neutral-900: #1a1424;
   
   /* Semantic colors */
   --success: #10b981;
@@ -144,33 +144,33 @@ html[data-locale^="zh"] {
 
 /* Dark mode styles */
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #1a1028;
+  --foreground: #f5f0fa;
   
-  /* Adjust colors for dark mode */
-  --primary: #f8fafc;
-  --primary-light: #e2e8f0;
-  --primary-dark: #cbd5e1;
-  --accent: #e4b976;
-  --accent-light: #f0c674;
-  --accent-dark: #d4a562;
+  /* Dark purple theme */
+  --primary: #f5f0fa;
+  --primary-light: #e8e0f2;
+  --primary-dark: #cfc4e0;
+  --accent: #c4a7f5;
+  --accent-light: #d8c4fa;
+  --accent-dark: #a57fe8;
   
   /* Dark mode glass effect */
-  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-bg: rgba(26, 16, 40, 0.8);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: rgba(0, 0, 0, 0.5);
   
   /* Neutral colors for dark mode - properly inverted */
-  --neutral-50: #0f172a;
-  --neutral-100: #1e293b;
-  --neutral-200: #334155;
-  --neutral-300: #475569;
-  --neutral-400: #64748b;
-  --neutral-500: #94a3b8;
-  --neutral-600: #cbd5e1;
-  --neutral-700: #e2e8f0;
-  --neutral-800: #1e293b;
-  --neutral-900: #0f172a;
+  --neutral-50: #1a1028;
+  --neutral-100: #261838;
+  --neutral-200: #36254d;
+  --neutral-300: #4a3766;
+  --neutral-400: #6e5b8c;
+  --neutral-500: #a093b8;
+  --neutral-600: #cfc4e0;
+  --neutral-700: #e8e0f2;
+  --neutral-800: #261838;
+  --neutral-900: #1a1028;
 }
 
 
@@ -249,7 +249,7 @@ body {
 }
 
 .dark .card-bg {
-  background-color: #1e293b;
+  background-color: #261838;
   /* Soften card borders in dark mode only */
-  border-color: rgba(148, 163, 184, 0.24);
+  border-color: rgba(196, 167, 245, 0.18);
 }
