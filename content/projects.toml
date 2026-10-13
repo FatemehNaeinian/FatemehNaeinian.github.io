@@ -80,7 +80,7 @@ title = "TALKtoME: Educational Materials for Speech and Language Acquisition in 
 venue = "Dataset release"
 year = 2026
 tags = ["Dataset", "Assistive technology", "Autism", "Language acquisition"]
-paper = "https://wp.nyu.edu/tandon_autism/"
+website = "https://wp.nyu.edu/tandon_autism/"
 summary = "A curated visual dataset of real-world images and videos of action verbs and verb–noun pairs, designed to support speech and language acquisition in autistic children and adults."
 
 content = '''
@@ -90,7 +90,9 @@ content = '''
 
 ### My contribution
 
-I designed data-collection strategies and helped curate the images and videos that make up the dataset. More information is available on the [project website](https://wp.nyu.edu/tandon_autism/).
+- Created the [project website](https://wp.nyu.edu/tandon_autism/).
+- Manage the dataset's public availability and access.
+- Designed data-collection strategies and helped curate the images and videos that make up the dataset.
 '''
 
 # ---------------------------------------------------------------------------

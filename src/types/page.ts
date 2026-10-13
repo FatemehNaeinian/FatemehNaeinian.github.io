@@ -57,6 +57,8 @@ export interface ProjectItem {
     summary: string;
     tags?: string[];
     paper?: string;
+    /** Project or dataset website (shown as a "Website" button). */
+    website?: string;
     code?: string;
     stats?: ProjectStat[];
     figures?: ProjectFigure[];

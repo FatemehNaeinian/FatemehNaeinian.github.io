@@ -196,7 +196,7 @@ function ProjectDetail({
                     </div>
                     <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-5">{item.summary}</p>
 
-                    {(item.paper || item.code) && (
+                    {(item.paper || item.website || item.code) && (
                         <div className="flex flex-wrap gap-2 mb-6">
                             {item.paper && (
                                 <a
@@ -207,6 +207,17 @@ function ProjectDetail({
                                 >
                                     <ArrowTopRightOnSquareIcon className="w-4 h-4" />
                                     Paper
+                                </a>
+                            )}
+                            {item.website && (
+                                <a
+                                    href={item.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 text-primary hover:bg-accent/10 hover:border-accent/40 transition-colors"
+                                >
+                                    <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+                                    Website
                                 </a>
                             )}
                             {item.code && (
