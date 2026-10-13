@@ -50,30 +50,6 @@ Cross-city transfer opens a substantial generalization gap that standard mixed-c
 
 # ---------------------------------------------------------------------------
 [[items]]
-id = "retrieval-jepa"
-short = "Retrieval-Augmented JEPA"
-title = "Retrieval-Augmented JEPA for Generalizable Representation Learning"
-venue = "Ongoing"
-year = 2026
-tags = ["Self-supervised learning", "JEPA", "Distribution shift", "Retrieval"]
-summary = "Can a self-supervised model learn better representations if it is allowed to look at related examples while it learns? Augmenting I-JEPA pretraining with retrieved support examples to improve transfer under distribution shift."
-
-content = '''
-### The question
-
-Joint-Embedding Predictive Architectures (JEPA) learn by predicting the representations of masked image regions from visible context. Each image is processed on its own. This project asks whether **relational information across observations** (other images that are similar to the one being encoded) can make the learned representations transfer better when the test distribution shifts.
-
-### Approach
-
-- Augment I-JEPA pretraining with **retrieved support examples** and fuse their information into the predictor.
-- Systematically study what matters: **retrieval quality**, the **fusion mechanism**, and the **training objective** (e.g., distillation-style variants).
-- Evaluate in controlled visual benchmarks (starting from ImageNet-100) with linear probes and careful noise-floor estimates, so that small differences are not mistaken for real gains.
-
-*Work in progress.*
-'''
-
-# ---------------------------------------------------------------------------
-[[items]]
 id = "data-efficient"
 short = "Data-Efficient Adaptation"
 title = "Data-Efficient Adaptation of Self-Supervised Encoders for Driving Perception"
