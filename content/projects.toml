@@ -16,7 +16,7 @@ venue = "arXiv preprint"
 year = 2026
 tags = ["Autonomous driving", "Domain generalization", "Self-supervised learning", "End-to-end planning"]
 paper = "https://arxiv.org/abs/2603.11417"
-thumbnail = { src = "/projects/crosscity-cities.webp", width = 1600, height = 900 }
+thumbnail = { src = "/projects/crosscity-qualitative.webp", width = 1599, height = 1189 }
 summary = "Does a driving model trained in one city still drive well in another? A controlled zero-shot stress test of how visual pretraining (I-JEPA, DINOv2, MAE vs. supervised ImageNet backbones) affects end-to-end planners under strict geographic splits."
 
 stats = [
@@ -28,7 +28,9 @@ stats = [
 
 figures = [
   { src = "/projects/crosscity-framework.webp", width = 2400, height = 597, wide = true, caption = "Overview: self-supervised ViT-S/14 encoders are pretrained on driving data, plugged into the LAW and TransFuser planners, and evaluated zero-shot on cities never seen during training." },
-  { src = "/projects/crosscity-cities.webp", width = 1600, height = 900, caption = "The four cities differ in road topology, traffic conventions (Singapore drives on the left), and visual appearance." },
+  { src = "/projects/crosscity-qualitative.webp", width = 1599, height = 1189, wide = true, caption = "Same frozen MAE ViT-S/14 planner, different source city. In scenes where the ego vehicle should stay stopped, the Singapore-trained model drives forward: a 12 m overshoot with LAW on nuScenes (a), and into a queued vehicle with TransFuser on NAVSIM (b). Models trained on Boston, Las Vegas, or Pittsburgh stay stopped." },
+  { src = "/projects/crosscity-coverage.webp", width = 1655, height = 762, wide = true, caption = "(a) EPDMS penalty of Singapore-trained planners on the other cities, by test-scene type: the drop is largest on stationary scenes for every backbone. (b) Source cities whose training data contain more stopped scenes transfer better on stationary test scenes." },
+  { src = "/projects/crosscity-density-control.webp", width = 1776, height = 581, wide = true, caption = "Controlled experiment: a Las Vegas training set matched to Singapore's sparse traffic (Vegas sparse) reproduces the Singapore failure on stationary scenes, while moving scenes change much less." },
 ]
 
 content = '''
@@ -45,7 +47,11 @@ End-to-end driving models are usually trained and tested on data mixed from seve
 
 ### Findings
 
-Cross-city transfer opens a substantial generalization gap that standard mixed-city evaluation does not reveal, and the gap is **strongly directional**: transferring from some cities to others is far harder than the reverse. These results argue for reporting zero-shot geographic transfer, with absolute performance and scenario-level diagnostics, as a standard stress test for end-to-end driving systems.
+- **A large, directional gap.** Cross-city transfer opens a substantial generalization gap that mixed-city evaluation hides, and transferring between some cities is far harder than the reverse.
+- **Pretraining alone does not fix it.** No single self-supervised objective dominates, and supervised and self-supervised backbones both degrade when they change cities.
+- **The training data's scenario coverage matters most.** Planners trained on Singapore's vehicle-sparse driving rarely see stopped traffic, and in other cities they drive forward in stopping and dense scenes, for every backbone family. A density-matched control on Las Vegas confirms this causally for stationary scenes.
+
+These results argue for reporting zero-shot geographic transfer, with absolute performance and scenario-level diagnostics, as a standard stress test for end-to-end driving systems.
 '''
 
 # ---------------------------------------------------------------------------
