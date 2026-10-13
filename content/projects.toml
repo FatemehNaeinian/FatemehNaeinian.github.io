@@ -124,6 +124,7 @@ paper = "https://ieeexplore.ieee.org/document/10668014"
 summary = "Learning where a three-finger robotic gripper should grasp an object from how humans grasp it: a new dataset of human three-finger grasps and a deep model that predicts grasp points from RGB images and finger keypoints. B.Sc. thesis at TaarLab, University of Tehran."
 
 stats = [
+  { value = "817", label = "image sets of human three-finger grasps (object, approach, grasp)" },
   { value = "88.2%", label = "Grasp Configurational Accuracy (GCA), a proposed metric" },
   { value = "96.5%", label = "grasp-angle accuracy" },
   { value = "45.7%", label = "IoU of the predicted grasp rectangle" },
@@ -131,6 +132,9 @@ stats = [
 
 figures = [
   { src = "/projects/grasping-overview.webp", width = 2254, height = 886, wide = true, caption = "Overview: an object-detection network extracts features from the object image, while MediaPipe extracts index, middle and thumb coordinates from the hand approaching the object. The fused features feed grasp-mapping networks that predict the three contact points of the gripper." },
+  { src = "/projects/grasping-dataset.webp", width = 2140, height = 604, wide = true, caption = "One sample from the dataset: (a) the object, (b) the hand approaching it, and (c) the moment of grasping." },
+  { src = "/projects/grasping-contact-points.webp", width = 2136, height = 580, wide = true, caption = "Predicted grasp contact points (crosses) versus ground truth (squares); the dots are the approaching finger positions given to the model as input." },
+  { src = "/projects/grasping-rectangles.webp", width = 2140, height = 581, wide = true, caption = "Grasp-rectangle representation of the prediction (red) and the ground truth (blue), used to compute IoU." },
 ]
 
 content = '''
