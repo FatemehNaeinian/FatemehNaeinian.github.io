@@ -129,6 +129,10 @@ stats = [
   { value = "45.7%", label = "IoU of the predicted grasp rectangle" },
 ]
 
+figures = [
+  { src = "/projects/grasping-overview.webp", width = 2254, height = 886, wide = true, caption = "Overview: an object-detection network extracts features from the object image, while MediaPipe extracts index, middle and thumb coordinates from the hand approaching the object. The fused features feed grasp-mapping networks that predict the three contact points of the gripper." },
+]
+
 content = '''
 ### Overview
 
