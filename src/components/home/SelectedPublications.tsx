@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Publication } from '@/types/publication';
 import { useMessages } from '@/lib/i18n/useMessages';
 import FormattedBibTeXText from '@/components/publications/FormattedBibTeXText';
+import { getPaperLink } from '@/lib/utils';
 
 interface SelectedPublicationsProps {
     publications: Publication[];
@@ -42,7 +43,13 @@ export default function SelectedPublications({ publications, title, enableOnePag
                         className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
                     >
                         <h3 className="font-semibold text-primary mb-2 leading-tight">
-                            <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                            {getPaperLink(pub) ? (
+                                <a href={getPaperLink(pub)} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                                    <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                                </a>
+                            ) : (
+                                <FormattedBibTeXText nodes={pub.titleNodes} fallback={pub.title} />
+                            )}
                         </h3>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1">
                             {pub.authors.map((author, idx) => (

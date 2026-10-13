@@ -25,3 +25,8 @@ export function generateSlug(text: string): string {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+// Link target for a publication title: paper page, then PDF, then DOI.
+export function getPaperLink(pub: { url?: string; pdfUrl?: string; doi?: string }): string | undefined {
+  return pub.url || pub.pdfUrl || (pub.doi ? `https://doi.org/${pub.doi}` : undefined);
+}
