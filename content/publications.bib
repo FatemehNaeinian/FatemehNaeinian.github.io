@@ -1,0 +1,36 @@
+% Custom fields understood by this site (stripped from the displayed BibTeX):
+%   selected    = {true}   -> shown under "Selected Publications" on the homepage
+%   pdf         = {url}    -> "PDF" button
+%   code        = {url}    -> "Code" button
+%   description = {...}    -> short blurb shown on the card
+%   preview     = {file}   -> image in public/papers/
+% Author matching "Fatemeh Naeinian" is highlighted automatically.
+
+@misc{naeinian2026crosscity,
+  selected = {true},
+  title = {Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations},
+  author = {Fatemeh Naeinian and Ali Hamza and Haoran Zhu and Anna Choromanska},
+  year = {2026},
+  month = mar,
+  howpublished = {arXiv preprint arXiv:2603.11417},
+  url = {https://arxiv.org/abs/2603.11417},
+  pdf = {https://arxiv.org/pdf/2603.11417},
+  keywords = {autonomous driving, domain generalization, self-supervised learning, end-to-end planning},
+  description = {A controlled zero-shot cross-city stress test for end-to-end driving: I-JEPA, DINOv2, and MAE backbones versus supervised ImageNet backbones under strict geographic splits on nuScenes and NAVSIM.},
+  abstract = {End-to-end autonomous driving models are typically trained on multi-city datasets using supervised ImageNet-pretrained backbones, yet their ability to generalize to unseen cities remains largely unexamined. When training and evaluation data are geographically mixed, models may implicitly rely on city-specific cues, masking failure modes that would occur under real-world domain shifts. We formulate zero-shot cross-city transfer as a controlled representation-level stress test for end-to-end autonomous driving and ask how visual pretraining affects transfer behavior under geographic domain shift. We integrate the self-supervised backbones I-JEPA, DINOv2, and MAE into planning frameworks and evaluate them under strict geographic splits on nuScenes in the open-loop setting and on NAVSIM in the closed-loop setting. Our experiments reveal a substantial, strongly directional generalization gap when transferring models across cities with different road topologies, traffic conventions, and visual environments, motivating zero-shot geographic transfer as a stress test for end-to-end autonomous driving systems.}
+}
+
+@inproceedings{naeinian2024grasping,
+  selected = {true},
+  title = {Mapping Human Grasping to 3-Finger Grippers: A Deep Learning Perspective},
+  author = {Fatemeh Naeinian and Elnaz Balazadeh and Mehdi Tale Masouleh},
+  booktitle = {Proceedings of the 32nd International Conference on Electrical Engineering (ICEE)},
+  pages = {1--7},
+  year = {2024},
+  month = may,
+  doi = {10.1109/ICEE63041.2024.10668014},
+  url = {https://ieeexplore.ieee.org/document/10668014},
+  keywords = {robotic grasping, deep learning, computer vision, human-robot interaction},
+  description = {Maps human grasping behavior to grasp points for a three-finger robotic gripper, using a MediaPipe hand-keypoint dataset and object-detection models.},
+  abstract = {We present a deep learning approach to map human grasping patterns to 3-finger robotic grippers. A dataset was generated using human hand features, with pre-processing steps employing MediaPipe to extract precise finger coordinates. The model was trained using object detection and computer vision techniques to identify optimal grasping points for robotic manipulation.}
+}

@@ -1,0 +1,22 @@
+type = "card"
+title = "Teaching & Service"
+description = "Reviewing, teaching, and mentoring."
+
+[[items]]
+title = "Reviewing"
+content = "IEEE Robotics and Automation Letters (RA-L), 2026; IEEE International Conference on Robotics and Automation (ICRA), 2027"
+
+[[items]]
+title = "Mentoring"
+subtitle = "Research Mentor, NYU ARISE Program — Summers 2025 and 2026"
+content = "Mentored high school students through end-to-end machine learning research projects, from problem formulation and dataset preparation to model training, evaluation, and a final poster presentation"
+
+[[items]]
+title = "Teaching"
+subtitle = "Course Assistant, New York University"
+content = "Digital Signal Processing (Fall 2025)"
+
+[[items]]
+title = "Teaching"
+subtitle = "Teaching Assistant, University of Tehran — 2021–2023"
+content = "Neural Networks and Deep Learning; Engineering Mathematics; Linear Control Systems; Probability and Statistics; Operations Research; Linear Algebra; Electrical Machines; Electronics I; Introduction to Electrical Engineering"

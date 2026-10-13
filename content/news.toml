@@ -1,0 +1,29 @@
+# Entries are plain text (no Markdown).
+
+[[news]]
+date = "Summer 2026"
+content = "Mentored high school students on machine learning research projects for the second year in the NYU ARISE program."
+
+[[news]]
+date = "May 2026"
+content = "Released the TALKtoME dataset, a curated visual dataset supporting speech and language acquisition in autism."
+
+[[news]]
+date = "Apr. 2026"
+content = "Presented our work on zero-shot cross-city generalization in autonomous driving at NYC Computer Vision Day."
+
+[[news]]
+date = "Mar. 2026"
+content = "Our paper on zero-shot cross-city generalization in end-to-end autonomous driving was released on arXiv."
+
+[[news]]
+date = "2025"
+content = "Received the NYU School of Engineering Ph.D. Fellowship."
+
+[[news]]
+date = "Jan. 2025"
+content = "Started my Ph.D. in Electrical Engineering at New York University."
+
+[[news]]
+date = "May 2024"
+content = "Presented our work on learning-based robotic grasping at ICEE 2024."

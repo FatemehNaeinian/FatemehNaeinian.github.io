@@ -1,0 +1,142 @@
+type = "projects"
+title = "Projects"
+description = "A closer look at the problems I work on. Click a project to see what it asks, how I approached it, and what I found."
+
+# Each [[items]] block is one project. `content` is Markdown; use ### headings for sections.
+# Figures live in public/projects/. The first figure is shown full width above the write-up,
+# the rest in a grid below it. The first figure is also the card thumbnail unless `thumbnail` is set.
+# width/height are the image's pixel dimensions.
+
+# ---------------------------------------------------------------------------
+[[items]]
+id = "cross-city"
+short = "Cross-City Driving"
+title = "Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations"
+venue = "arXiv preprint"
+year = 2026
+tags = ["Autonomous driving", "Domain generalization", "Self-supervised learning", "End-to-end planning"]
+paper = "https://arxiv.org/abs/2603.11417"
+thumbnail = { src = "/projects/crosscity-cities.webp", width = 1600, height = 900 }
+summary = "Does a driving model trained in one city still drive well in another? A controlled zero-shot stress test of how visual pretraining (I-JEPA, DINOv2, MAE vs. supervised ImageNet backbones) affects end-to-end planners under strict geographic splits."
+
+stats = [
+  { value = "4", label = "cities (Boston, Las Vegas, Pittsburgh, Singapore)" },
+  { value = "2", label = "planners: LAW (camera) and TransFuser (camera + LiDAR)" },
+  { value = "3", label = "self-supervised objectives: I-JEPA, DINOv2, MAE" },
+  { value = "2", label = "protocols: open-loop (nuScenes) and closed-loop (NAVSIM)" },
+]
+
+figures = [
+  { src = "/projects/crosscity-framework.webp", width = 2400, height = 597, wide = true, caption = "Overview: self-supervised ViT-S/14 encoders are pretrained on driving data, plugged into the LAW and TransFuser planners, and evaluated zero-shot on cities never seen during training." },
+  { src = "/projects/crosscity-cities.webp", width = 1600, height = 900, caption = "The four cities differ in road topology, traffic conventions (Singapore drives on the left), and visual appearance." },
+]
+
+content = '''
+### The problem
+
+End-to-end driving models are usually trained and tested on data mixed from several cities, typically with supervised ImageNet-pretrained backbones. That hides an important failure mode: a model can lean on city-specific cues and look strong on its benchmark, then break when it is deployed somewhere new. We ask how much the choice of **visual representation** matters when a planner has to drive, with no adaptation, in a city it has never seen.
+
+### Approach
+
+- **Strict geographic splits.** Train on one city and test on the others, on nuScenes (Boston, Singapore; open-loop L2 and collision metrics) and NAVSIM (four cities; closed-loop PDMS).
+- **Controlled backbone swap.** The planning architecture stays fixed while only the visual encoder changes: supervised ResNet and Swin backbones versus ViT-S/14 encoders pretrained with I-JEPA, DINOv2, and MAE.
+- **Two planner families.** LAW, a camera-only latent world model, and TransFuser, a camera + LiDAR fusion planner.
+- **Scenario-level diagnostics.** Beyond aggregate scores, we break performance down by traffic density, stopping, and turning scenes to see *where* models fail when they change cities.
+
+### Findings
+
+Cross-city transfer opens a substantial generalization gap that standard mixed-city evaluation does not reveal, and the gap is **strongly directional**: transferring from some cities to others is far harder than the reverse. These results argue for reporting zero-shot geographic transfer, with absolute performance and scenario-level diagnostics, as a standard stress test for end-to-end driving systems.
+'''
+
+# ---------------------------------------------------------------------------
+[[items]]
+id = "retrieval-jepa"
+short = "Retrieval-Augmented JEPA"
+title = "Retrieval-Augmented JEPA for Generalizable Representation Learning"
+venue = "Ongoing"
+year = 2026
+tags = ["Self-supervised learning", "JEPA", "Distribution shift", "Retrieval"]
+summary = "Can a self-supervised model learn better representations if it is allowed to look at related examples while it learns? Augmenting I-JEPA pretraining with retrieved support examples to improve transfer under distribution shift."
+
+content = '''
+### The question
+
+Joint-Embedding Predictive Architectures (JEPA) learn by predicting the representations of masked image regions from visible context. Each image is processed on its own. This project asks whether **relational information across observations** (other images that are similar to the one being encoded) can make the learned representations transfer better when the test distribution shifts.
+
+### Approach
+
+- Augment I-JEPA pretraining with **retrieved support examples** and fuse their information into the predictor.
+- Systematically study what matters: **retrieval quality**, the **fusion mechanism**, and the **training objective** (e.g., distillation-style variants).
+- Evaluate in controlled visual benchmarks (starting from ImageNet-100) with linear probes and careful noise-floor estimates, so that small differences are not mistaken for real gains.
+
+*Work in progress.*
+'''
+
+# ---------------------------------------------------------------------------
+[[items]]
+id = "data-efficient"
+short = "Data-Efficient Adaptation"
+title = "Data-Efficient Adaptation of Self-Supervised Encoders for Driving Perception"
+venue = "Ongoing"
+year = 2026
+tags = ["Data selection", "Parameter-efficient fine-tuning", "Autonomous driving", "Perception"]
+summary = "Which few labeled images should you pick, and how much of the network should you tune, when adapting a self-supervised encoder to driving perception with limited labels?"
+
+content = '''
+### The question
+
+Labeling driving data for dense perception tasks is expensive. Given a strong self-supervised encoder and a small labeling budget, which samples should be labeled, and how should the encoder be adapted?
+
+### Approach
+
+- **Data selection.** Combine diversity-based sampling, prototype-based filtering, and gradient-based selection to choose informative training subsets.
+- **Adaptation strategies.** Compare frozen backbones, partial fine-tuning, and LoRA-based parameter-efficient adaptation.
+- **Tasks.** Semantic segmentation and object detection on BDD100K, studying how data efficiency and representation transfer interact.
+
+*Work in progress.*
+'''
+
+# ---------------------------------------------------------------------------
+[[items]]
+id = "talktome"
+short = "TALKtoME"
+title = "TALKtoME: Educational Materials for Speech and Language Acquisition in Autism"
+venue = "Dataset release"
+year = 2026
+tags = ["Dataset", "Assistive technology", "Autism", "Language acquisition"]
+paper = "https://wp.nyu.edu/tandon_autism/"
+summary = "A curated visual dataset of real-world images and videos of action verbs and verb–noun pairs, designed to support speech and language acquisition in autistic children and adults."
+
+content = '''
+### Overview
+
+**TALKtoME** collects real-world images and videos of everyday actions (action verbs and verb–noun pairs) for use in speech and language therapy and education.
+
+### My contribution
+
+I designed data-collection strategies and helped curate the images and videos that make up the dataset. More information is available on the [project website](https://wp.nyu.edu/tandon_autism/).
+'''
+
+# ---------------------------------------------------------------------------
+[[items]]
+id = "grasping"
+short = "Human-to-Robot Grasping"
+title = "Mapping Human Grasping to 3-Finger Grippers: A Deep Learning Perspective"
+venue = "ICEE"
+year = 2024
+tags = ["Robotics", "Grasping", "Computer vision", "Human-robot interaction"]
+paper = "https://ieeexplore.ieee.org/document/10668014"
+summary = "Learning where a three-finger robotic gripper should grasp an object by watching how humans grasp it. B.Sc. thesis at TaarLab, University of Tehran."
+
+content = '''
+### Overview
+
+Humans grasp objects effortlessly, and the way we place our fingers carries a lot of information about where an object can be held stably. This project transfers that knowledge to a **three-finger robotic gripper**.
+
+### Approach
+
+- Built a dataset of human hand features, using **MediaPipe** to extract precise finger keypoints during grasps.
+- Trained **object-detection models** to predict grasp points for the three-finger gripper from images of the object.
+
+This was my B.Sc. thesis at the Human and Robot Interaction Laboratory (TaarLab), University of Tehran, advised by Prof. Mehdi Tale Masouleh, and was published at ICEE 2024.
+'''

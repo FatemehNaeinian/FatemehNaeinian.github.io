@@ -1,0 +1,59 @@
+[site]
+title = "Fatemeh Naeinian"
+description = "Ph.D. student in Electrical Engineering at New York University, working on self-supervised representation learning and generalization for autonomous driving."
+# favicon = "/favicon.svg"   # uncomment and add the file to public/ to show a tab icon
+last_updated = "October 13, 2026"
+
+[author]
+name = "Fatemeh Naeinian"
+title = "Ph.D. Student"
+institution = "New York University"
+avatar = "/bio.jpg"
+
+[social]
+# Contact information (leave blank or delete to hide)
+email = "fn2174@nyu.edu"
+google_scholar = "https://scholar.google.com/citations?user=FWeuC-cAAAAJ&hl=en"
+github = "https://github.com/FatemehNaeinian"
+linkedin = "https://www.linkedin.com/in/fatemeh-naeinian-550004204/"
+
+[features]
+# Show a like button on the about page
+enable_likes = false
+
+# Display all subpages on a single page
+enable_one_page_mode = false
+
+[i18n]
+enabled = false
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "Projects"
+type = "page"
+target = "projects"
+href = "/projects"
+
+[[navigation]]
+title = "Teaching & Service"
+type = "page"
+target = "service"
+href = "/service"
+
+# External link: opens the CV PDF directly
+[[navigation]]
+title = "CV"
+type = "link"
+target = "cv"
+href = "/files/Fatemeh_Naeinian_CV_NYU.pdf"
