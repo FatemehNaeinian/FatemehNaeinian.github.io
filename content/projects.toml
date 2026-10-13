@@ -89,10 +89,21 @@ tags = ["Dataset", "Assistive technology", "Autism", "Language acquisition"]
 website = "https://wp.nyu.edu/tandon_autism/"
 summary = "A curated visual dataset of real-world images and videos of action verbs and verb–noun pairs, designed to support speech and language acquisition in autistic children and adults."
 
+stats = [
+  { value = "50", label = "action verbs (~10 images and ~4 videos each)" },
+  { value = "136", label = "verb + noun pairs (~4 images and ~3.5 videos each)" },
+]
+
+figures = [
+  { src = "/projects/talktome-examples.webp", width = 1500, height = 1010, wide = true, caption = "Example images from the dataset: the action verb \"draw\" and the verb + noun pair \"blow balloon\"." },
+]
+
 content = '''
 ### Overview
 
 **TALKtoME** collects real-world images and videos of everyday actions (action verbs and verb–noun pairs) for use in speech and language therapy and education.
+
+The dataset is organized by concept: each folder holds the images or videos for one action verb (e.g., *draw*, *jump*, *wave*) or one verb + noun pair (e.g., *blow balloon*, *brush teeth*, *bake bread*).
 
 ### My contribution
 
@@ -110,17 +121,29 @@ venue = "ICEE"
 year = 2024
 tags = ["Robotics", "Grasping", "Computer vision", "Human-robot interaction"]
 paper = "https://ieeexplore.ieee.org/document/10668014"
-summary = "Learning where a three-finger robotic gripper should grasp an object by watching how humans grasp it. B.Sc. thesis at TaarLab, University of Tehran."
+summary = "Learning where a three-finger robotic gripper should grasp an object from how humans grasp it: a new dataset of human three-finger grasps and a deep model that predicts grasp points from RGB images and finger keypoints. B.Sc. thesis at TaarLab, University of Tehran."
+
+stats = [
+  { value = "88.2%", label = "Grasp Configurational Accuracy (GCA), a proposed metric" },
+  { value = "96.5%", label = "grasp-angle accuracy" },
+  { value = "45.7%", label = "IoU of the predicted grasp rectangle" },
+]
 
 content = '''
 ### Overview
 
-Humans grasp objects effortlessly, and the way we place our fingers carries a lot of information about where an object can be held stably. This project transfers that knowledge to a **three-finger robotic gripper**.
+Grasping is a fundamental part of how humans interact with the world, but replicating it on robots is hard because of the complexity of hand–object interaction. This project maps **human grasping behavior to a three-finger robotic gripper**: given an RGB image of an object and the hand's finger coordinates while it approaches, the model predicts where the gripper should grasp.
 
 ### Approach
 
-- Built a dataset of human hand features, using **MediaPipe** to extract precise finger keypoints during grasps.
-- Trained **object-detection models** to predict grasp points for the three-finger gripper from images of the object.
+- **Dataset.** A new dataset of human-like three-finger grasps covering a variety of object orientations and scenarios.
+- **Hand keypoints.** Finger coordinates are extracted with **MediaPipe** in both the approaching and the grasping state.
+- **Model.** A pretrained **Faster R-CNN** detects the object, and fully connected networks regress the grasp points.
+- **Evaluation.** Intersection over Union (IoU) of the grasp rectangle, grasp angle, and a new metric, **Grasp Configurational Accuracy (GCA)**.
+
+### Results
+
+The trained network reaches **88.2% GCA**, **96.5%** grasp-angle accuracy, and **45.7% IoU** in the grasp-rectangle representation.
 
 This was my B.Sc. thesis at the Human and Robot Interaction Laboratory (TaarLab), University of Tehran, advised by Prof. Mehdi Tale Masouleh, and was published at ICEE 2024.
 '''
