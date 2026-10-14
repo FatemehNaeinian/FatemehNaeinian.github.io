@@ -164,8 +164,9 @@ html[data-locale^="zh"] {
   --neutral-50: #1a1028;
   --neutral-100: #261838;
   --neutral-200: #36254d;
-  --neutral-300: #4a3766;
-  --neutral-400: #6e5b8c;
+  /* 300/400 are used as dark-mode text colors (dark:text-neutral-300/400), so keep them light */
+  --neutral-300: #d6cce6;
+  --neutral-400: #b3a6c9;
   --neutral-500: #a093b8;
   --neutral-600: #cfc4e0;
   --neutral-700: #e8e0f2;
