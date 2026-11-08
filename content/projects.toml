@@ -64,6 +64,10 @@ year = 2026
 tags = ["Data selection", "Parameter-efficient fine-tuning", "Autonomous driving", "Perception"]
 summary = "Which few labeled images should you pick, and how much of the network should you tune, when adapting a self-supervised encoder to driving perception with limited labels?"
 
+figures = [
+  { src = "/projects/sampling-pipeline.webp", width = 1905, height = 576, wide = true, caption = "Pipeline: a label-free selection policy chooses which driving frames to add to a base set, a ViT encoder is pretrained with self-supervision on the result, and the encoder is evaluated on downstream segmentation and detection." },
+]
+
 content = '''
 ### The question
 
