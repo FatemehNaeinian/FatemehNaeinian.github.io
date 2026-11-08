@@ -62,6 +62,7 @@ title = "Data-Efficient Adaptation of Self-Supervised Encoders for Driving Perce
 venue = "Ongoing"
 year = 2026
 tags = ["Data selection", "Parameter-efficient fine-tuning", "Autonomous driving", "Perception"]
+thumbnail = { src = "/projects/sampling-thumb.webp", width = 1340, height = 870 }
 summary = "Which few labeled images should you pick, and how much of the network should you tune, when adapting a self-supervised encoder to driving perception with limited labels?"
 
 figures = [
